@@ -40,7 +40,7 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    #4eabf9 !default; // Modificado
+$main-blue:    #4eabf9 !default; // Modificado
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
@@ -50,12 +50,13 @@ $yellow:  #FFC05B !default; // Modificado
 $green:   #198754 !default;
 $teal:    #42DCA6 !default; // Modificado
 $cyan:    #0dcaf0 !default;
-$sky:     #d1e9ff !default;
+$sky:     #d1e9ff !default; // Creado
+$lead:    #7C7C7C !default; // Creado
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
 $colors: (
-  "blue":       $blue,
+  "main-blue":       $main-blue,
   "indigo":     $indigo,
   "purple":     $purple,
   "pink":       $pink,
@@ -69,7 +70,7 @@ $colors: (
   "white":      $white,
   "gray":       $gray-600,
   "gray-dark":  $gray-800,
-  "sky":        $sky
+  "sky":        $sky // Creado
 ) !default;
 // scss-docs-end colors-map
 
@@ -82,15 +83,15 @@ $color-contrast-dark:      $black !default;
 $color-contrast-light:     $white !default;
 
 // fusv-disable
-$blue-100: tint-color($blue, 80%) !default;
-$blue-200: tint-color($blue, 60%) !default;
-$blue-300: tint-color($blue, 40%) !default;
-$blue-400: tint-color($blue, 20%) !default;
-$blue-500: $blue !default;
-$blue-600: shade-color($blue, 20%) !default;
-$blue-700: shade-color($blue, 40%) !default;
-$blue-800: shade-color($blue, 60%) !default;
-$blue-900: shade-color($blue, 80%) !default;
+$main-blue-100: tint-color($main-blue, 80%) !default;
+$main-blue-200: tint-color($main-blue, 60%) !default;
+$main-blue-300: tint-color($main-blue, 40%) !default;
+$main-blue-400: tint-color($main-blue, 20%) !default;
+$main-blue-500: $main-blue !default;
+$main-blue-600: shade-color($main-blue, 20%) !default;
+$main-blue-700: shade-color($main-blue, 40%) !default;
+$main-blue-800: shade-color($main-blue, 60%) !default;
+$main-blue-900: shade-color($main-blue, 80%) !default;
 
 $indigo-100: tint-color($indigo, 80%) !default;
 $indigo-200: tint-color($indigo, 60%) !default;
@@ -183,15 +184,15 @@ $cyan-800: shade-color($cyan, 60%) !default;
 $cyan-900: shade-color($cyan, 80%) !default;
 
 $blues: (
-  "blue-100": $blue-100,
-  "blue-200": $blue-200,
-  "blue-300": $blue-300,
-  "blue-400": $blue-400,
-  "blue-500": $blue-500,
-  "blue-600": $blue-600,
-  "blue-700": $blue-700,
-  "blue-800": $blue-800,
-  "blue-900": $blue-900
+  "blue-100": $main-blue-100,
+  "blue-200": $main-blue-200,
+  "blue-300": $main-blue-300,
+  "blue-400": $main-blue-400,
+  "blue-500": $main-blue-500,
+  "blue-600": $main-blue-600,
+  "blue-700": $main-blue-700,
+  "blue-800": $main-blue-800,
+  "blue-900": $main-blue-900
 ) !default;
 
 $indigos: (
@@ -304,26 +305,28 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$primary:       $main-blue !default;
 $secondary:     $gray-600 !default;
-$success:       $green !default;
+$success:       $teal !default; // Modificado
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$text-lead:     $lead !default; // Creado
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
-  "success":    $success,
+  "success":    $teal,
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "lead":       $lead // Creado
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -550,7 +553,7 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
+$border-radius:               .75rem !default; // Modificado
 $border-radius-sm:            .25rem !default;
 $border-radius-lg:            .5rem !default;
 $border-radius-xl:            1rem !default;
@@ -617,7 +620,7 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
-$font-size-root:              null !default;
+$font-size-root:              16px !default; // Modificado Esta es la fuente base base de verdad, la establezco en 16px
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
@@ -636,8 +639,8 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
+$h1-font-size:                $font-size-base * 3 !default; // Modificado multiplicador
+$h2-font-size:                $font-size-base * 2.25 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
@@ -681,8 +684,8 @@ $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
 // scss-docs-start type-variables
-$lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$lead-font-size:              $font-size-base * 0.750 !default; // Modificado
+$lead-font-weight:            200 !default; // Modificado
 
 $small-font-size:             .875em !default;
 
@@ -792,8 +795,8 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         .425rem !default; // Modificado
+$input-btn-padding-x:         1.25rem !default; // Modificado
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
