@@ -50,3 +50,8 @@
 // Utilities
 @import "utilities/api";
 // scss-docs-end import-stack
+
+
+body{
+    padding-top: $body-padding-top;
+}

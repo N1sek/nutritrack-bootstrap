@@ -12087,4 +12087,7 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+body {
+  padding-top: 4rem;
 }/*# sourceMappingURL=bootstrap.css.map */

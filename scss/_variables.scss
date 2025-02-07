@@ -455,6 +455,8 @@ $body-tertiary-bg:          $gray-100 !default;
 
 $body-emphasis-color:       $black !default;
 
+$body-padding-top:          4rem !default; // Debido a que se va a usar un nav "fixed", se agrega padding para que el contenido no se muestre detras del nav
+
 // Links
 //
 // Style anchor elements.
@@ -640,7 +642,7 @@ $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
 $h1-font-size:                $font-size-base * 3 !default; // Modificado multiplicador
-$h2-font-size:                $font-size-base * 2.25 !default;
+$h2-font-size:                $font-size-base * 2.25 !default; // Modificado
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
